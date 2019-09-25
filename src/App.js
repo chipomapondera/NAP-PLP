@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ServiceMessage from './components/serviceMessage'
+import SiteHeader from './components/siteHeader'
+import { createComponent } from 'react-fela'
+// import './App.css';
+import data from './data/'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const appBox = ()=>({
+  width: '100%',
+  display: 'block',
+  margin: '0 auto',
+  boxizing: 'border-box',
+})
+
+const AppBox = createComponent (appBox, 'div')  
+const App =()=> {
+  return (
+    <AppBox>
+      <ServiceMessage info={data.serviceMessage}/>
+      <SiteHeader info={data.siteHeader}/>
+      </AppBox>
   );
 }
 
-export default App;
+export default App
