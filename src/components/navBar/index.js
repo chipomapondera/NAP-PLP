@@ -16,31 +16,30 @@ const NavBarElements = createComponent (() => ({
     maxWidth: '1120px',
     margin: '0 auto',
     height: '40px',
-    display: 'flex',
     backgroundColor: 'yellow',
 }), 'div')
 
 const NavBar = ({info}) => {
     console.log('info', info)
     
-    const {whatsNewMenu, designersMenu, clothingMenu, shoesMenu, bagsMenu, accessoriesMenu, jewelryMenu, lingerieMenu, beautyMenu, wearMenu} = info
+    const {whatsNewMenu, designersMenu, clothingMenu, shoesMenu, bagsMenu, accessoriesMenu, jewelryMenu, lingerieMenu, beautyMenu, wearMenu, navSearchText} = info
     return (
         <NavBarWrapper>
             <NavBarElements>
-                <NavMenu>
+                <NavMenu
                 whatsNewMenu={whatsNewMenu}
                 designersMenu={designersMenu}
                 clothingMenu={clothingMenu}
                 shoesMenu={shoesMenu}
                 bagsMenu={bagsMenu}
                 accessoriesMenu={accessoriesMenu}
-                jewelryMenu-{jewelryMenu}
+                jewelryMenu={jewelryMenu}
                 lingerieMenu={lingerieMenu}
                 beautyMenu={beautyMenu}
                 wearMenu={wearMenu}
-                </NavMenu>
+                />
+                <NavSearch navSearchText={navSearchText}/>
             </NavBarElements>
-            <NavSearch />
         </NavBarWrapper>
     )
 }

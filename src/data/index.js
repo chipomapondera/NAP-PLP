@@ -23,6 +23,7 @@ const data={
         lingerieMenu: 'LINGERIE',
         beautyMenu: 'BEAUTY',
         wearMenu: 'WHAT TO WEAR',
+        navSearchText: 'SEARCH',
     }
 }
 
