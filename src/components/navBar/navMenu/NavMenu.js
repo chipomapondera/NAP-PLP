@@ -1,20 +1,21 @@
 import React from 'react'
 import {createComponent} from 'react-fela'
 
-const NavMenuBox = createComponent (() => ({
-    
-}), 'div')
-
 const NavMenuList = createComponent (() => ({
     listStyle: 'none',
     display: 'flex',
-    justifyContent: 'space-between',
+    margin: '0px',
+    padding: '0px',
 }), 'ul')
 
 const NavMenuListItem = createComponent (() => ({
-    padding: '0px 20px',
+    display: 'flex',
+    alignItems: 'center',
+    margin: '0px',
+    paddingRight: '40px',
     fontFamily: 'Gill Sans MT, sans-serif',
-    fontSize: '12px',
+    fontSize: '11px',
+    letterSpacing: '1px',
     color: 'white'
 }), 'li')
 
@@ -24,7 +25,6 @@ const LogoLink = createComponent (() => ({
 
 const NavMenu = ({whatsNewMenu, designersMenu, clothingMenu, shoesMenu, bagsMenu, accessoriesMenu, jewelryMenu, lingerieMenu, beautyMenu, wearMenu}) => {
     return (
-        <NavMenuBox>
             <NavMenuList>
                 <NavMenuListItem><LogoLink>{whatsNewMenu}</LogoLink></NavMenuListItem>
                 <NavMenuListItem><LogoLink>{designersMenu}</LogoLink></NavMenuListItem>
@@ -37,7 +37,6 @@ const NavMenu = ({whatsNewMenu, designersMenu, clothingMenu, shoesMenu, bagsMenu
                 <NavMenuListItem><LogoLink>{beautyMenu}</LogoLink></NavMenuListItem>
                 <NavMenuListItem><LogoLink>{wearMenu}</LogoLink></NavMenuListItem>
             </NavMenuList>
-        </NavMenuBox>
     )
 }
 

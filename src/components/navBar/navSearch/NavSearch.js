@@ -12,7 +12,8 @@ const NavSearchBox = createComponent (() => ({
 
 const NavSearchText = createComponent (() => ({
     fontFamily: 'Gill Sans MT, sans-serif',
-    fontSize: '12px',
+    fontSize: '11px',
+    letterSpacing: '1px',
     color: 'grey'
 }), 'div')
 
@@ -25,7 +26,7 @@ const SearchIconWrapper = createComponent (() => ({
 const NavSearchIcon = createComponent (() => ({ 
     width: '20px',
     height: '20px',
-    backgroundImage: 'url("https://i.postimg.cc/pd8NBCDz/Nav-Search-Icon.png")',
+    backgroundImage: 'url("https://i.postimg.cc/MHZQL1yp/Nav-Search-Icon.png")',
     backgroundSize: 'cover',  
     display: 'block',
 }), 'a')
