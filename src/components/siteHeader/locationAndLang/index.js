@@ -1,6 +1,5 @@
 import React from 'react'
 import {createComponent} from 'react-fela'
-import { relative } from 'path'
 
 const LocationAndLangBox = createComponent (() => ({
     whiteSpace: 'nowrap',
@@ -18,7 +17,6 @@ const LocationText = createComponent (() => ({
 
 const LanguageText = createComponent (() => ({  
     display: 'flex',
-    flexDirection: 'row',
     position: 'relative',
     fontFamily: 'Gill Sans MT, sans-serif',
     fontSize: '14px',

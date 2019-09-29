@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceMessage from './components/serviceMessage'
 import SiteHeader from './components/siteHeader'
+import NavBar from './components/navBar'
 import { createComponent } from 'react-fela'
 // import './App.css';
 import data from './data/'
@@ -13,12 +14,14 @@ const appBox = ()=>({
 })
 
 const AppBox = createComponent (appBox, 'div')  
+
 const App =()=> {
   return (
     <AppBox>
-      <ServiceMessage info={data.serviceMessage}/>
-      <SiteHeader info={data.siteHeader}/>
-      </AppBox>
+      <ServiceMessage info={data.serviceMessage} />
+      <SiteHeader info={data.siteHeader} />
+      <NavBar info={data.navBar} />
+    </AppBox>
   );
 }
 

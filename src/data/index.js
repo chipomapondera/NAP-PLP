@@ -10,7 +10,20 @@ const data={
         userLanguage: 'English',
         userRegistration: 'Register',
         userLogin: 'Sign In',
+    },
+
+    navBar:{
+        whatsNewMenu: 'WHAT\'S NEW',
+        designersMenu: 'DESIGNERS',
+        clothingMenu: 'CLOTHING',
+        shoesMenu: 'SHOES',
+        bagsMenu: 'BAGS',
+        accessoriesMenu: 'ACCESSORIES',
+        jewelryMenu: 'JEWELRY',
+        lingerieMenu: 'LINGERIE',
+        beautyMenu: 'BEAUTY',
+        wearMenu: 'WHAT TO WEAR',
     }
 }
 
-export default data
+export default data 

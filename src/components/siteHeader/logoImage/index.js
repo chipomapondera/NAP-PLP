@@ -5,7 +5,6 @@ const LogoImageBox = createComponent (() => ({
     display: 'flex',
     justifyContent: 'center',
     boxSizing: 'border-box',
-    justifyContent: 'center',
     alignItems: 'center',
 }), 'a')
 
