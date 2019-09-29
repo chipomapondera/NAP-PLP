@@ -8,15 +8,14 @@ const NavMenuBox = createComponent (() => ({
 const NavMenuList = createComponent (() => ({
     listStyle: 'none',
     display: 'flex',
-    justifyContent: 'center',
-    position: 'relative',
+    justifyContent: 'space-between',
 }), 'ul')
 
 const NavMenuListItem = createComponent (() => ({
     padding: '0px 20px',
     fontFamily: 'Gill Sans MT, sans-serif',
-    fontSize: '11px',
-    color: 'red'
+    fontSize: '12px',
+    color: 'white'
 }), 'li')
 
 const LogoLink = createComponent (() => ({

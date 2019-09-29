@@ -6,17 +6,17 @@ import NavSearch from '../navBar/navSearch/NavSearch'
 const NavBarWrapper = createComponent (() => ({
     maxWidth: '1680px',
     margin: '0 auto',
-    height: '40px',
-    display: 'flex',
-    justifyContent: 'space-between',
+    height: '30px',
     backgroundColor: 'black'
 }), 'div')
 
 const NavBarElements = createComponent (() => ({
     maxWidth: '1120px',
     margin: '0 auto',
-    height: '40px',
-    backgroundColor: 'yellow',
+    height: '30px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    backgroundColor: 'black',
 }), 'div')
 
 const NavBar = ({info}) => {

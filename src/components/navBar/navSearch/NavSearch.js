@@ -3,16 +3,17 @@ import {createComponent} from 'react-fela'
 
 const NavSearchBox = createComponent (() => ({
     display: 'flex',
-    height: '40px',
-    justifyContent: 'flex-end',
+    height: '30px',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'blue',
+    paddingLeft: '20px',
+    backgroundColor: 'white',
 }), 'div')
 
 const NavSearchText = createComponent (() => ({
     fontFamily: 'Gill Sans MT, sans-serif',
-    fontSize: '11px',
-    color: 'red'
+    fontSize: '12px',
+    color: 'grey'
 }), 'div')
 
 const SearchIconWrapper = createComponent (() => ({
@@ -22,8 +23,8 @@ const SearchIconWrapper = createComponent (() => ({
 }), 'div')
 
 const NavSearchIcon = createComponent (() => ({ 
-    width: '18px',
-    height: '18px',
+    width: '20px',
+    height: '20px',
     backgroundImage: 'url("https://i.postimg.cc/pd8NBCDz/Nav-Search-Icon.png")',
     backgroundSize: 'cover',  
     display: 'block',

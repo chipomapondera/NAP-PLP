@@ -9,7 +9,6 @@ const LocationAndLangBox = createComponent (() => ({
 
 const LocationText = createComponent (() => ({  
     display: 'flex',
-    position: 'relative',
     fontFamily: 'Gill Sans MT, sans-serif',
     fontSize: '14px',
     marginRight: '15px',
@@ -17,7 +16,6 @@ const LocationText = createComponent (() => ({
 
 const LanguageText = createComponent (() => ({  
     display: 'flex',
-    position: 'relative',
     fontFamily: 'Gill Sans MT, sans-serif',
     fontSize: '14px',
 }), 'div')
