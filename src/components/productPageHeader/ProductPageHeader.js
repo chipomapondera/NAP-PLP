@@ -3,7 +3,11 @@ import {createComponent} from 'react-fela'
 import HeaderName from './headerName/HeaderName'
 
 const BodyHeaderWrapper = createComponent (() => ({
-    
+    margin: '0 auto',
+    padding: '0',
+    backgroundColor: 'blue',
+    maxWidth: '1000px',
+    height: '50px',
 }), 'div')
 
 const ProductPageHeader = ({productPageTitle}) => {
