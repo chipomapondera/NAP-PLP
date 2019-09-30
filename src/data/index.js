@@ -26,6 +26,13 @@ const data={
         navSearchText: 'SEARCH',
     },
 
+    productPageHeader:{
+        womensButton: 'Womens Shoes',
+        mensButton: 'Mens Shoes',
+        pageTitle: 'SHOES',
+        pageResults: '12 Results',
+    },
+
     productPageBody: {
 
         shoeListing:{

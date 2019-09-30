@@ -2,23 +2,29 @@ import React from 'react'
 import {createComponent} from 'react-fela'
 
 const ProdWrapper = createComponent (() => ({
-
+    
 }), 'div')
 
 const ProdCard = createComponent (() => ({
 
-}), 'div')
+}), 'ul')
 
-const ShoeListing = ({brandName, prodDescription, prodPrice, prodColor, prodImageUrl, modelImageUrl}) => {
+const ProdCardItem = createComponent (() => ({
+    
+}), 'li')
+
+const ShoeListing = ({brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl}) => {
     return (
         <ProdWrapper>
             <ProdCard>
-                {brandName} 
-                {prodDescription} 
-                {prodPrice} 
-                {prodColor} 
-                {prodImageUrl} 
-                {modelImageUrl}
+                <ProdCardItem>
+                    {prodImageUrl} 
+                    {modelImageUrl} 
+                    {brandName} 
+                    {prodDescription} 
+                    {prodPrice}
+                </ProdCardItem>
+                
             </ProdCard>
         </ProdWrapper>
     )
