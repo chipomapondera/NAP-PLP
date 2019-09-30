@@ -2,6 +2,7 @@ import React from 'react';
 import ServiceMessage from './components/serviceMessage'
 import SiteHeader from './components/siteHeader'
 import NavBar from './components/navBar'
+import ProductPageBody from './components/productPageBody/ProductPageBody'
 import { createComponent } from 'react-fela'
 // import './App.css';
 import data from './data/'
@@ -21,6 +22,8 @@ const App =()=> {
       <ServiceMessage info={data.serviceMessage} />
       <SiteHeader info={data.siteHeader} />
       <NavBar info={data.navBar} />
+      <ProductPageBody productPageInfo={data.productPageBody} />
+
     </AppBox>
   );
 }
