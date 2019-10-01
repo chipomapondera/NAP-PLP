@@ -33,7 +33,7 @@ const ProductListColumn = createComponent (() => ({
 }), 'div')
 
 const ProductPageBody = ({productPageInfo}) => {
-    const {brandName, prodDescription, prodPrice, prodColor, prodImageUrl, modelImageUrl, womensButton, mensButton, pageTitle, pageResults} = productPageInfo
+     
     return (
         <ProductBody>
             <ShoeFilterColumn> 
@@ -43,7 +43,7 @@ const ProductPageBody = ({productPageInfo}) => {
                 <ShoeSizeFilter />
             </ShoeFilterColumn>
             <ProductListColumn> 
-                <ShoeListing brandName={brandName} prodDescription={prodDescription} prodPrice={prodPrice} prodColor={prodColor} prodImageUrl={prodImageUrl} modelImageUrl={modelImageUrl} />
+                <ShoeListing womensShoes = {productPageInfo.shoeListing.womensShoes}/>
             </ProductListColumn>
         </ProductBody>
     )

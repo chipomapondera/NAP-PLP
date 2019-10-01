@@ -8,35 +8,37 @@ const ProdWrapper = createComponent (() => ({
     boxSizing: 'border-box',
 }), 'div')
 
-const ProdCard = createComponent (() => ({
+const ProdContainer = createComponent (() => ({
     display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    listStyle: 'none',
     boxSizing: 'border-box',
+    width: '100%',
+    height: '1600px',
     margin: '0',
     padding: '0',
     backgroundColor: 'orange',
-    width: '800px',
-}), 'div')
+}), 'ul')
 
-const ProdCardItem = createComponent (() => ({
+const ProdCardContainer = createComponent (() => ({
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '10px',
     boxSizing: 'border-box',
-    height: '',
-    width: '',
-    
-}), 'div')
+    width: '30%',
+    height: '370px',
+    backgroundColor: 'crimson'
+}), 'li')
 
-const ShoeListing = ({brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl}) => {
+const ShoeListing = ({womensShoes}) => {
+    console.log(womensShoes, ">>")
     return (
         <ProdWrapper>
-            <ProdCard>
-                <ProdCardItem>
-                    {prodImageUrl} 
-                    {modelImageUrl} 
-                    {brandName} 
-                    {prodDescription} 
-                    {prodPrice}
-                </ProdCardItem>
-            </ProdCard>
+            <ProdContainer>
+                {womensShoes.map((shoesPair) => {return <ProdCardContainer shoesPair={shoesPair} />})}
+            </ProdContainer>
         </ProdWrapper>
     )
 }

@@ -22,7 +22,7 @@ const ServiceMainText = createComponent (() => ({
 const ServiceText1 = createComponent (() => ({
   display: 'inline-block',
   position: 'absolute',
-  top: '17px',
+  top: '12px',
   left: '25px',
   fontSize: '11px',
   fontFamily: 'Gill Sans MT, sans-serif',
@@ -31,7 +31,7 @@ const ServiceText1 = createComponent (() => ({
 const ServiceText2 = createComponent (() => ({
   display: 'inline-block',
   position: 'absolute',
-  top: '17px',
+  top: '12px',
   right: '80px',
   fontSize: '11px',
   fontWeight: '500',
@@ -41,13 +41,15 @@ const ServiceText2 = createComponent (() => ({
 const ServiceMenu = createComponent (() => ({
   display: 'inline-block',
   position: 'absolute',
-  top: '17px',
+  top: '12px',
   right: '20px',
   fontSize: '11px',
+  fontFamily: 'Gill Sans MT, sans-serif',
+  fontWeight: '500',
+  borderLeft: '1px solid grey',
 }), 'div')
 
 const ServiceLink = createComponent(() => ({
-  borderLeft: '1px solid black',
   paddingLeft: '20px',
   textDecoration: 'none',
   color: 'black',
