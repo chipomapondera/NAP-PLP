@@ -8,7 +8,7 @@ import UserUI from './userUI'
 const SiteHeaderWrapper = createComponent(() => ({
     maxWidth: '1120px',
     margin: '0 auto',
-    height: '100px',
+    height: '80px',
     display: 'flex',
     justifyContent: 'space-between',
 }), 'div')

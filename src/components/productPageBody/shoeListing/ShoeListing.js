@@ -2,16 +2,28 @@ import React from 'react'
 import {createComponent} from 'react-fela'
 
 const ProdWrapper = createComponent (() => ({
-    
+    backgroundColor: 'pink',
+    width: '100%',
+    height: '2000px',
+    boxSizing: 'border-box',
 }), 'div')
 
 const ProdCard = createComponent (() => ({
-
-}), 'ul')
+    display: 'flex',
+    justifyContent: 'center',
+    boxSizing: 'border-box',
+    margin: '0',
+    padding: '0',
+    backgroundColor: 'orange',
+    width: '800px',
+}), 'div')
 
 const ProdCardItem = createComponent (() => ({
+    boxSizing: 'border-box',
+    height: '',
+    width: '',
     
-}), 'li')
+}), 'div')
 
 const ShoeListing = ({brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl}) => {
     return (
@@ -24,7 +36,6 @@ const ShoeListing = ({brandName, prodDescription, prodPrice, prodImageUrl, model
                     {prodDescription} 
                     {prodPrice}
                 </ProdCardItem>
-                
             </ProdCard>
         </ProdWrapper>
     )

@@ -33,6 +33,23 @@ const data={
         pageResults: '12 Results',
     },
 
+    productPageFilters:{
+        shoeStyleHeader: 'SHOES',
+        highHeeledStyle: 'HIGH-HEELED SHOES',
+        midHeeledStyle: 'MID-HEELED SHOES',
+        flatStyle: 'FLAT SHOES',
+        bootStyle: 'BOOTS',
+        eveningStyle: 'EVENING SHOES',
+        espadrilleStyle: 'ESPADRILLES',
+        flatformStyle: 'FLATFORMS',
+        muleStyle: 'MULES',
+        pumpStyle: 'PUMPS',
+        sandalStyle: 'SANDALS',
+        sneakerStyle: 'SNEAKERS',
+        trendStyle: 'SHOE TRENDS',
+        wedgeStyle: 'WEDGES',
+    },
+
     productPageBody: {
 
         shoeListing:{

@@ -3,7 +3,7 @@ import {createComponent} from 'react-fela'
 
 const ServiceMessageBox = createComponent (() => ({
   maxWidth: '1680px',
-  height: '53px',
+  height: '35px',
   backgroundColor: '#EEEEEE',
   borderBottom: '1px solid #EEEEEE',
   display: 'flex',

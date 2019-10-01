@@ -7,7 +7,7 @@ const BodyHeaderWrapper = createComponent (() => ({
     padding: '0',
     backgroundColor: 'blue',
     maxWidth: '1000px',
-    height: '50px',
+    height: '55px',
 }), 'div')
 
 const ProductPageHeader = ({productPageTitle}) => {
