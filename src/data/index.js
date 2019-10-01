@@ -31,6 +31,7 @@ const data={
         mensButton: 'Mens Shoes',
         pageTitle: 'SHOES',
         pageResults: '12 Results',
+        pageNumberCount: '< 1 2 3 ... 61 >'
     },
 
     productPageBody: {
