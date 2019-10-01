@@ -93,7 +93,7 @@ const data={
                     prodDescription: 'Scarlet glossed-leather mules',
                     prodPrice: '£435.00',
                     prodColor: ['Pink', 'Green'],
-                    prodImageUrl: 'https://www.net-a-porter.com/gb/en/product/1182727',
+                    prodImageUrl: 'https://cache.net-a-porter.com/images/products/1182727/1182727_in_xl.jpg',
                     modelImageUrl: 'https://cache.net-a-porter.com/images/products/1182727/1182727_fr_pp.jpg',
                 },
             
@@ -108,6 +108,7 @@ const data={
                 {
                     brandName: 'BY FAR',
                     prodDescription: 'Este leather ankle boots',
+                    prodPrice: '£410.00',
                     prodColor: ['Off-White', 'Black'],
                     prodImageUrl: 'https://cache.net-a-porter.com/images/products/1183074/1183074_in_xl.jpg',
                     modelImageUrl: 'https://cache.net-a-porter.com/images/products/1183074/1183074_fr_pp.jpg',

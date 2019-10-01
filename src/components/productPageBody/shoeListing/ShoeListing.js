@@ -1,25 +1,26 @@
 import React from 'react'
 import {createComponent} from 'react-fela'
+import ProductCard from '../productCard/ProductCard'
 
 const ProdWrapper = createComponent (() => ({
-    backgroundColor: 'pink',
     width: '100%',
     height: '2000px',
     boxSizing: 'border-box',
+    backgroundColor: 'white',
 }), 'div')
 
 const ProdContainer = createComponent (() => ({
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexWrap: 'wrap',
     alignItems: 'center',
     listStyle: 'none',
     boxSizing: 'border-box',
     width: '100%',
     height: '1600px',
-    margin: '0',
+    marginLeft: '60px',
     padding: '0',
-    backgroundColor: 'orange',
+    backgroundColor: 'white',
 }), 'ul')
 
 const ProdCardContainer = createComponent (() => ({
@@ -28,8 +29,8 @@ const ProdCardContainer = createComponent (() => ({
     margin: '10px',
     boxSizing: 'border-box',
     width: '30%',
-    height: '370px',
-    backgroundColor: 'crimson'
+    height: '390px',
+    backgroundColor: 'white'
 }), 'li')
 
 const ShoeListing = ({womensShoes}) => {
@@ -37,7 +38,9 @@ const ShoeListing = ({womensShoes}) => {
     return (
         <ProdWrapper>
             <ProdContainer>
-                {womensShoes.map((shoesPair) => {return <ProdCardContainer shoesPair={shoesPair} />})}
+                {womensShoes.map((shoesPair) => {return <ProdCardContainer>
+                    <ProductCard shoesPair={shoesPair} />
+                </ProdCardContainer>})}
             </ProdContainer>
         </ProdWrapper>
     )

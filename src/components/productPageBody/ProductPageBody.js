@@ -11,7 +11,7 @@ const ProductBody = createComponent (() => ({
     display: 'flex',
     margin: '0 auto',
     padding: '0',
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
     width: '1000px',
     height: '2000px',
 }), 'div')
