@@ -40,7 +40,6 @@ const ShoePrice = createComponent (() => ({
 
 const ProductCard = ({shoesPair}) => {
     const {brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl} = shoesPair
-    console.log('shoesPair', shoesPair)
 
     const [onMouseOver, setOnMouseOver] = useState(false)
     const imgUrl = onMouseOver ? modelImageUrl : prodImageUrl
