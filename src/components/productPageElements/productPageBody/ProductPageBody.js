@@ -1,6 +1,6 @@
 import React from 'react'
 import {createComponent} from 'react-fela'
-import ShoeListing from '../productPageBody/shoeListing/ShoeListing'
+import ShoeListing from './shoeListing/ShoeListing'
 import ShoeStyleFilter from './shoeStyleFilter/ShoeStyleFilter'
 import ShoeDesignerFilter from './shoeDesignerFilter/ShoeDesignerFilter'
 import ShoeColorFilter from './shoeColorFilter/ShoeColorFilter'
@@ -32,7 +32,7 @@ const ProductListColumn = createComponent (() => ({
     height: '2000px',
 }), 'div')
 
-const ProductPageBody = ({productPageInfo}) => {
+const ProductPageBody = ({finalProducts}) => {
      
     return (
         <ProductBody>
@@ -43,7 +43,7 @@ const ProductPageBody = ({productPageInfo}) => {
                 <ShoeSizeFilter />
             </ShoeFilterColumn>
             <ProductListColumn> 
-                <ShoeListing womensShoes = {productPageInfo.shoeListing.womensShoes}/>
+                <ShoeListing finalProducts = {finalProducts}/>
             </ProductListColumn>
         </ProductBody>
     )

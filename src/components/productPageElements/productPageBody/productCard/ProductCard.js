@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import {createComponent} from 'react-fela'
 
 
@@ -40,16 +40,19 @@ const ShoePrice = createComponent (() => ({
 
 const ProductCard = ({shoesPair}) => {
     const {brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl} = shoesPair
-    const [imgUrl, setImgUrl] = useState(prodImageUrl)
+    console.log('shoesPair', shoesPair)
 
+    const [onMouseOver, setOnMouseOver] = useState(false)
+    const imgUrl = onMouseOver ? modelImageUrl : prodImageUrl
+    
     return (
         <>
         <ShoeImageWrapper> 
             <ShoeImage src={imgUrl}  
-                onMouseOver ={(mouseIn) => {
-                    mouseIn = setImgUrl(modelImageUrl)                   
-                }} onMouseOut ={(mouseOut) => {
-                    mouseOut = setImgUrl(prodImageUrl);
+                onMouseOver ={() => {
+                    setOnMouseOver(true)                   
+                }} onMouseOut ={() => {
+                    setOnMouseOver(false);
                 }}
                     />
         </ShoeImageWrapper>

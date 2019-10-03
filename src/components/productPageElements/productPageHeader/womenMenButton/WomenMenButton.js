@@ -6,7 +6,7 @@ const ToggleBox = createComponent (() => ({
     backgroundColor: 'white',
     borderBottom: '1px dashed grey',
     paddingBottom: '10px',
-}), 'div')
+}), 'div', ['onClick'])
 
 const ToggleButton = createComponent (() => ({
     width: '120px',
@@ -17,13 +17,13 @@ const ToggleButton = createComponent (() => ({
     letterSpacing: '1px',
 }), 'button')
 
-const ViewToggle = ({mensButton}) => {
+const WomenMenButton = ({buttonText, showMaleProduct, setShowMaleProduct}) => {
     return (
-        <ToggleBox>
-            <ToggleButton>{mensButton}</ToggleButton>
+        <ToggleBox onClick={()=> setShowMaleProduct(!showMaleProduct)}>
+            <ToggleButton>{buttonText}</ToggleButton>
         </ToggleBox>
     )
 }
 
-export default ViewToggle
+export default WomenMenButton
 

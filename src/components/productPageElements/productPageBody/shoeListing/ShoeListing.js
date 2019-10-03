@@ -33,12 +33,12 @@ const ProdCardContainer = createComponent (() => ({
     backgroundColor: 'white'
 }), 'li')
 
-const ShoeListing = ({womensShoes}) => {
-    console.log(womensShoes, ">>")
+const ShoeListing = ({finalProducts}) => {
+    // console.log(womensShoes, ">>")
     return (
         <ProdWrapper>
             <ProdContainer>
-                {womensShoes.map((shoesPair) => {return <ProdCardContainer>
+                {finalProducts.map((shoesPair) => {return <ProdCardContainer>
                     <ProductCard shoesPair={shoesPair} />
                 </ProdCardContainer>})}
             </ProdContainer>
