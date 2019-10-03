@@ -1,5 +1,6 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import {createComponent} from 'react-fela'
+
 
 const ShoeImageWrapper = createComponent (() => ({
     width: '100%',
@@ -12,7 +13,7 @@ const ShoeImage = createComponent (() => ({
     height: '300px',
     backgroundSize: 'cover',  
     display: 'block',
-}), 'img', ['src'])
+}), 'img', ['src','onMouseOver','onMouseOut'])
 
 const ShoeInfoWrapper = createComponent (() => ({
     width: '90%',
@@ -38,11 +39,19 @@ const ShoePrice = createComponent (() => ({
 }), 'div')
 
 const ProductCard = ({shoesPair}) => {
-    const {brandName, prodDescription, prodPrice, prodImageUrl} = shoesPair
+    const {brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl} = shoesPair
+    const [imgUrl, setImgUrl] = useState(prodImageUrl)
+
     return (
         <>
         <ShoeImageWrapper> 
-            <ShoeImage src={prodImageUrl} />
+            <ShoeImage src={imgUrl}  
+                onMouseOver ={(mouseIn) => {
+                    mouseIn = setImgUrl(modelImageUrl)                   
+                }} onMouseOut ={(mouseOut) => {
+                    mouseOut = setImgUrl(prodImageUrl);
+                }}
+                    />
         </ShoeImageWrapper>
         <ShoeInfoWrapper>
             <ShoeBrand brandName={brandName}>{brandName}</ShoeBrand>
