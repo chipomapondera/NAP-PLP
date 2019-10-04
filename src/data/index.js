@@ -29,7 +29,8 @@ const data={
     productPageHeader:{
         womensButton: 'Womens Shoes',
         mensButton: 'Mens Shoes',
-        colorButton: 'Colours',
+        showColorButton: 'Show Colours',
+        hideColorButton: 'Hide Colours',
         pageTitle: 'SHOES',
         pageResults: '12 Results',
         pageNumberCount: '< 1 2 3 ... 61 >'

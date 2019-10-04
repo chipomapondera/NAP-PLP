@@ -18,10 +18,11 @@ const PageHeaderWrapper = createComponent ((props) => ({
 }), 'div')
 
 const ProductPageElements = ({productPageTitle, productPageInfo}) => {
-    const {pageTitle, pageResults, mensButton, womensButton, colorButton, pageNumberCount} = productPageTitle
+    const {pageTitle, pageResults, mensButton, womensButton, showColorButton, hideColorButton, pageNumberCount} = productPageTitle
     const [showMaleProduct, setShowMaleProduct] = useState(false)
-    //const [showColors, setShowColors] = useState()
+    const [showColors, setShowColors] = useState(false)
     const womenMenButtonText = showMaleProduct ? womensButton : mensButton
+    const colourButtonText = showColors ? hideColorButton : showColorButton
     const finalProducts = showMaleProduct ? productPageInfo.shoeListing.mensShoes : productPageInfo.shoeListing.womensShoes
         
     return (
@@ -30,7 +31,10 @@ const ProductPageElements = ({productPageTitle, productPageInfo}) => {
                 <PageHeaderButtons womenMenButtonText={womenMenButtonText} 
                 showMaleProduct={showMaleProduct}
                 setShowMaleProduct={setShowMaleProduct}
-                colorButton = {colorButton}
+                colourButtonText = {colourButtonText}
+                showColors={showColors}
+                setShowColors={setShowColors}
+
                 /> 
                 <HeaderName pageTitle={pageTitle} pageResults={pageResults} />
                 <PageNumber pageNumberCount={pageNumberCount}/>

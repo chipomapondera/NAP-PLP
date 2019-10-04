@@ -29,7 +29,7 @@ const ProdCardContainer = createComponent (() => ({
     margin: '10px',
     boxSizing: 'border-box',
     width: '30%',
-    height: '415px',
+    height: '410px',
     backgroundColor: 'white'
 }), 'li')
 

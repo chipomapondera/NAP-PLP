@@ -44,14 +44,14 @@ const ColorButton = createComponent (() => ({
     letterSpacing: '1px',
 }), 'button')
 
-const PageHeaderButtons = ({colorButton, womenMenButtonText, showMaleProduct, setShowMaleProduct}) => {
+const PageHeaderButtons = ({womenMenButtonText, showMaleProduct, setShowMaleProduct, colourButtonText, showColors, setShowColors}) => {
     return (
         <ButtonWrapper> 
             <WomenMenButtonBox onClick={()=> setShowMaleProduct(!showMaleProduct)}>
                 <WomenMenButton>{womenMenButtonText}</WomenMenButton>
             </WomenMenButtonBox>
-            <ColorButtonBox>
-                <ColorButton>{colorButton}</ColorButton>
+            <ColorButtonBox onClick={()=> setShowColors(!showColors)}>
+                <ColorButton>{colourButtonText}</ColorButton>
             </ColorButtonBox>
         </ButtonWrapper>
     )
