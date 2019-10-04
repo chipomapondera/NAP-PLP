@@ -29,6 +29,7 @@ const data={
     productPageHeader:{
         womensButton: 'Womens Shoes',
         mensButton: 'Mens Shoes',
+        colorButton: 'Colours',
         pageTitle: 'SHOES',
         pageResults: '12 Results',
         pageNumberCount: '< 1 2 3 ... 61 >'

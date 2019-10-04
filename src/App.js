@@ -4,7 +4,6 @@ import SiteHeader from './components/siteHeader'
 import NavBar from './components/navBar'
 import ProductPageElements from './components/productPageElements/ProductPageElements'
 import { createComponent } from 'react-fela'
-// import './App.css';
 import data from './data/'
 
 const appBox = ()=>({
