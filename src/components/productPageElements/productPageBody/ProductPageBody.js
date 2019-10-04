@@ -29,7 +29,7 @@ const ProductListColumn = createComponent (() => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
     width: '80%',
-    height: '2000px',
+    height: '2500px',
 }), 'div')
 
 const ProductPageBody = ({finalProducts}) => {
@@ -43,7 +43,7 @@ const ProductPageBody = ({finalProducts}) => {
                 <ShoeSizeFilter />
             </ShoeFilterColumn>
             <ProductListColumn> 
-                <ShoeListing finalProducts = {finalProducts}/>
+                <ShoeListing finalProducts={finalProducts}/>
             </ProductListColumn>
         </ProductBody>
     )

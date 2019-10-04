@@ -20,6 +20,7 @@ const PageHeaderWrapper = createComponent ((props) => ({
 const ProductPageElements = ({productPageTitle, productPageInfo}) => {
     const {pageTitle, pageResults, mensButton, womensButton, colorButton, pageNumberCount} = productPageTitle
     const [showMaleProduct, setShowMaleProduct] = useState(false)
+    //const [showColors, setShowColors] = useState()
     const womenMenButtonText = showMaleProduct ? womensButton : mensButton
     const finalProducts = showMaleProduct ? productPageInfo.shoeListing.mensShoes : productPageInfo.shoeListing.womensShoes
         

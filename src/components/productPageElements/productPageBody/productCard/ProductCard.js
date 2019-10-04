@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {Fragment, useState} from 'react'
 import {createComponent} from 'react-fela'
 
 
@@ -38,9 +38,16 @@ const ShoePrice = createComponent (() => ({
     fontSize: '14px',
 }), 'div')
 
-const ProductCard = ({shoesPair}) => {
-    const {brandName, prodDescription, prodPrice, prodImageUrl, modelImageUrl} = shoesPair
+const ShoeColor = createComponent (() => ({
+    width: '15px',
+    height: '15px',
+    border: '1px solid grey',
+    marginTop: '5px',
+}), 'div')
 
+const ProductCard = ({shoesPair}) => {
+    const {brandName, prodDescription, prodPrice, prodColor, prodImageUrl, modelImageUrl} = shoesPair
+    //const {prodColor} = colorInfo
     const [onMouseOver, setOnMouseOver] = useState(false)
     const imgUrl = onMouseOver ? modelImageUrl : prodImageUrl
     
@@ -58,7 +65,8 @@ const ProductCard = ({shoesPair}) => {
         <ShoeInfoWrapper>
             <ShoeBrand brandName={brandName}>{brandName}</ShoeBrand>
             <ShoeDescription prodDescription={prodDescription}>{prodDescription}</ShoeDescription>
-            <ShoePrice prodPrice={prodPrice}>{prodPrice}</ShoePrice> 
+            <ShoePrice prodColor>{prodPrice}</ShoePrice>
+            {prodColor ? (<ShoeColor prodColor={prodColor}></ShoeColor>) : ('') }
         </ShoeInfoWrapper>
         </>
     )
