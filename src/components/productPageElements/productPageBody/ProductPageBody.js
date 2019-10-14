@@ -32,7 +32,7 @@ const ProductListColumn = createComponent (() => ({
     height: '2500px',
 }), 'div')
 
-const ProductPageBody = ({finalProducts}) => {
+const ProductPageBody = ({finalProducts, showColors}) => {
      
     return (
         <ProductBody>
@@ -43,7 +43,7 @@ const ProductPageBody = ({finalProducts}) => {
                 <ShoeSizeFilter />
             </ShoeFilterColumn>
             <ProductListColumn> 
-                <ShoeListing finalProducts={finalProducts} />
+                <ShoeListing finalProducts={finalProducts} showColors={showColors}/>
             </ProductListColumn>
         </ProductBody>
     )

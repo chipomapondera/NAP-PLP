@@ -42,18 +42,18 @@ const ColorContainer = createComponent (() => ({
     margin: '0px',
 }), 'div')
 
-const ShoeListing = ({finalProducts}) => {
+const ShoeListing = ({finalProducts, showColors}) => {
     // console.log(womensShoes, ">>")
-    console.log('finalProducts', finalProducts)
+    console.log('showColor', showColors)
     return (
         <ProdWrapper>
             <ProdContainer>
                 {finalProducts.map((shoesPair,) => {return <ProdCardContainer>
                     <ProductCard shoesPair={shoesPair} />
-                    <ColorContainer>
+                    {showColors && <ColorContainer>
                         {shoesPair.prodColor && shoesPair.prodColor.map((colorInfo) =>  
                         <ProductColor colorInfo={colorInfo}>{colorInfo}</ProductColor>)}
-                    </ColorContainer>
+                    </ColorContainer>}
                 </ProdCardContainer>})}
             </ProdContainer>
         </ProdWrapper>

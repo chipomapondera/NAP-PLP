@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import {createComponent} from 'react-fela'
 import PageHeaderButtons from './productPageHeader/pageHeaderButtons/PageHeaderButtons'
 import HeaderName from './productPageHeader/headerName/HeaderName'
@@ -12,7 +12,6 @@ const PageHeaderWrapper = createComponent ((props) => ({
     alignItems: 'center',
     margin: '0 auto',
     padding: '0',
-    //backgroundColor: props.color,
     maxWidth: '1000px',
     height: '55px',
 }), 'div')
@@ -24,10 +23,10 @@ const ProductPageElements = ({productPageTitle, productPageInfo}) => {
     const womenMenButtonText = showMaleProduct ? womensButton : mensButton
     const colourButtonText = showColors ? hideColorButton : showColorButton
     const finalProducts = showMaleProduct ? productPageInfo.shoeListing.mensShoes : productPageInfo.shoeListing.womensShoes
-        
+   
     return (
         <>
-            <PageHeaderWrapper productPageTitle={productPageTitle} color='blue'>
+            <PageHeaderWrapper productPageTitle={productPageTitle}>
                 <PageHeaderButtons womenMenButtonText={womenMenButtonText} 
                 showMaleProduct={showMaleProduct}
                 setShowMaleProduct={setShowMaleProduct}
@@ -39,7 +38,7 @@ const ProductPageElements = ({productPageTitle, productPageInfo}) => {
                 <HeaderName pageTitle={pageTitle} pageResults={pageResults} />
                 <PageNumber pageNumberCount={pageNumberCount}/>
             </PageHeaderWrapper>
-            <ProductPageBody finalProducts={finalProducts}/>
+            <ProductPageBody finalProducts={finalProducts} showColors={showColors}/>
         </>
     )
 }

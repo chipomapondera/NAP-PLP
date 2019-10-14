@@ -8,7 +8,7 @@ const ButtonWrapper = createComponent (() => ({
     width: '45%',
     backgroundColor: 'white',
     paddingBottom: '10px',
-    borderBottom: '1px dashed, grey',
+    borderBottom: '1px dashed grey'
 }), 'div')
 
 const WomenMenButtonBox = createComponent (() => ({
@@ -33,7 +33,7 @@ const ColorButtonBox = createComponent (() => ({
     justifyContent: 'flex-start', 
     width: '23%',
     backgroundColor: 'white',
-borderBottom: '1px dashed, grey',
+    borderBottom: '1px dashed, grey',
 }), 'div', ['onClick'])
 
 const ColorButton = createComponent (() => ({
