@@ -1,6 +1,7 @@
 import React from 'react'
 import {createComponent} from 'react-fela'
 import ProductCard from '../productCard/ProductCard'
+import ProductColor from '../productColor/ProductColor'
 
 const ProdWrapper = createComponent (() => ({
     width: '100%',
@@ -29,17 +30,30 @@ const ProdCardContainer = createComponent (() => ({
     margin: '10px',
     boxSizing: 'border-box',
     width: '30%',
-    height: '410px',
+    height: '390px',
     backgroundColor: 'white'
 }), 'li')
 
+const ColorContainer = createComponent (() => ({
+    display: 'flex',
+    justifyContent: 'flex-start',
+    width: '100%',
+    height: '20px',
+    margin: '0px',
+}), 'div')
+
 const ShoeListing = ({finalProducts}) => {
     // console.log(womensShoes, ">>")
+    console.log('finalProducts', finalProducts)
     return (
         <ProdWrapper>
             <ProdContainer>
-                {finalProducts.map((shoesPair) => {return <ProdCardContainer>
+                {finalProducts.map((shoesPair,) => {return <ProdCardContainer>
                     <ProductCard shoesPair={shoesPair} />
+                    <ColorContainer>
+                        {shoesPair.prodColor && shoesPair.prodColor.map((colorInfo) =>  
+                        <ProductColor colorInfo={colorInfo}>{colorInfo}</ProductColor>)}
+                    </ColorContainer>
                 </ProdCardContainer>})}
             </ProdContainer>
         </ProdWrapper>

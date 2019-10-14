@@ -12,7 +12,7 @@ const PageHeaderWrapper = createComponent ((props) => ({
     alignItems: 'center',
     margin: '0 auto',
     padding: '0',
-    backgroundColor: props.color,
+    //backgroundColor: props.color,
     maxWidth: '1000px',
     height: '55px',
 }), 'div')
@@ -27,7 +27,7 @@ const ProductPageElements = ({productPageTitle, productPageInfo}) => {
         
     return (
         <>
-            <PageHeaderWrapper productPageTitle={productPageTitle} color='red'>
+            <PageHeaderWrapper productPageTitle={productPageTitle} color='blue'>
                 <PageHeaderButtons womenMenButtonText={womenMenButtonText} 
                 showMaleProduct={showMaleProduct}
                 setShowMaleProduct={setShowMaleProduct}

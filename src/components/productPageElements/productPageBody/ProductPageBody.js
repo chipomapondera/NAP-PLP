@@ -43,7 +43,7 @@ const ProductPageBody = ({finalProducts}) => {
                 <ShoeSizeFilter />
             </ShoeFilterColumn>
             <ProductListColumn> 
-                <ShoeListing finalProducts={finalProducts}/>
+                <ShoeListing finalProducts={finalProducts} />
             </ProductListColumn>
         </ProductBody>
     )
