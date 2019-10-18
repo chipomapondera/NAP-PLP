@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {createComponent} from 'react-fela'
 import PageHeaderButtons from './productPageHeader/pageHeaderButtons/PageHeaderButtons'
 import HeaderName from './productPageHeader/headerName/HeaderName'
